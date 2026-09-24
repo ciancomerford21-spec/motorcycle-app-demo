@@ -1,6 +1,8 @@
 from dataclasses import dataclass
 from datetime import date
 
+DATA_FILE = "src/motorcycle_data.json"
+
 @dataclass
 class MaintenanceItem:
     name: str
@@ -12,9 +14,11 @@ class MaintenanceItem:
     def next_service_km(self) -> int:
         return self.next_service_km + self.interval_km
 
+    @property
     def km_remaining(self, current_km) -> int:
         return self.next_service_km - current_km
 
+    @property
     def is_due(self, current_km) -> bool:
         return current_km >= self.next_service_km
 
@@ -23,3 +27,10 @@ class ServiceRecord:
     item_name: str
     service_date: str
     mileage: int
+
+@dataclass
+class MotorcycleInfo:
+    make: str
+    model: str
+    year: int
+    current_mileage: int

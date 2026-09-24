@@ -1,0 +1,17 @@
+{
+    "motorcycle": {
+        "make": "Yamaha",
+        "model": "R6",
+        "year": 2003,
+        "current_mileage": 30000
+    },
+    "maintenance": [
+        {
+            "name": "Engine Oil",
+            "interval_km": 6000,
+            "last_service_date": "2026-06-01",
+            "last_service_km": 6000
+        }
+    ]
+    
+}
