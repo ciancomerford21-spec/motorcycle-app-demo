@@ -1,4 +1,6 @@
-from src.app import *
+import tkinter as tk
+
+from src.app import Tracker
 
 def main():
     root = tk.Tk()

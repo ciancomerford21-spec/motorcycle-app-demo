@@ -9,9 +9,15 @@
         {
             "name": "Engine Oil",
             "interval_km": 6000,
-            "last_service_date": "2026-06-01",
-            "last_service_km": 6000
+            "last_service_date": "2026-09-24",
+            "last_service_km": 30000
+        }
+    ],
+    "history": [
+        {
+            "item_name": "Engine Oil",
+            "service_date": "2026-09-24",
+            "mileage": 30000
         }
     ]
-    
 }

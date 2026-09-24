@@ -1,7 +1,8 @@
-from dataclasses import dataclass
+from dataclasses import dataclass, asdict
 from datetime import date
+from pathlib import Path
 
-DATA_FILE = "src/motorcycle_data.json"
+DATA_FILE = Path(__file__).with_name("motorcycle_data.json")
 
 @dataclass
 class MaintenanceItem:
@@ -12,13 +13,11 @@ class MaintenanceItem:
 
     @property
     def next_service_km(self) -> int:
-        return self.next_service_km + self.interval_km
+        return self.last_service_km + self.interval_km
 
-    @property
     def km_remaining(self, current_km) -> int:
         return self.next_service_km - current_km
 
-    @property
     def is_due(self, current_km) -> bool:
         return current_km >= self.next_service_km
 
